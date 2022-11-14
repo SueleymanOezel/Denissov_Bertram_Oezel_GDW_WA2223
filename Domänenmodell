@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-14T09:49:30.778Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="38kEV2rnTENi-VAo3ZaO" version="20.5.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-14T09:49:38.524Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42" etag="zP3tBjpt5fWPrUiIJjF2" version="20.5.3" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1182" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="990" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -122,7 +122,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="x7MRvZMjAkjf7LFy6HuC" name="Seite-2">
-    <mxGraphModel dx="2009" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1817" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -188,6 +188,9 @@
         <mxCell id="5pZEyal_g9z3olfpXIbo-5" value="Registration im FitnessCenter" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-40" y="390" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5pZEyal_g9z3olfpXIbo-9" target="ZsT28K0DQAqvFxzjEtY3-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="5pZEyal_g9z3olfpXIbo-9" value="Übersicht Smart-Gym" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-40" y="110" width="120" height="60" as="geometry" />
         </mxCell>
@@ -197,17 +200,40 @@
         <mxCell id="Xcgjlx6PuHo7aJOJNjeR-7" value="Geräte" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="470" y="390" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZsT28K0DQAqvFxzjEtY3-1" target="ZsT28K0DQAqvFxzjEtY3-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="YP4WHJqbPa97D3PPzYFB-1" value="Fitnesscoach" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="720" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-1" value="Ansicht Kurse" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YP4WHJqbPa97D3PPzYFB-3" value="Putzkraft" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="840" y="250" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZsT28K0DQAqvFxzjEtY3-3" target="ZsT28K0DQAqvFxzjEtY3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-9" value="wird reserviert" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ZsT28K0DQAqvFxzjEtY3-8">
+          <mxGeometry x="-0.235" y="-1" relative="1" as="geometry">
+            <mxPoint x="-9" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="YP4WHJqbPa97D3PPzYFB-5" value="Buchhalter" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="720" y="390" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-3" value="Kurs Anmeldung" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="YP4WHJqbPa97D3PPzYFB-7" value="Räume" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="230" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-7" value="Anzahl Plätze" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZsT28K0DQAqvFxzjEtY3-10" value="anmelden" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="200" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
