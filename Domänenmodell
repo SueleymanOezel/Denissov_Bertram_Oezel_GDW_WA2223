@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-14T09:40:55.842Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="qEHR2N6U4xtAJND4g0bE" version="20.5.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-14T09:43:59.777Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="WxL88msyqhAe87D_lOIp" version="20.5.3" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1182" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -135,6 +135,12 @@
         <mxCell id="Xcgjlx6PuHo7aJOJNjeR-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hak9p-BNMLi4yprlu4ZF-1" target="Xcgjlx6PuHo7aJOJNjeR-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="Xcgjlx6PuHo7aJOJNjeR-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hak9p-BNMLi4yprlu4ZF-1" target="Xcgjlx6PuHo7aJOJNjeR-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xcgjlx6PuHo7aJOJNjeR-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hak9p-BNMLi4yprlu4ZF-1" target="Xcgjlx6PuHo7aJOJNjeR-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="hak9p-BNMLi4yprlu4ZF-1" value="Fitness-Center" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="250" width="120" height="60" as="geometry" />
         </mxCell>
@@ -172,6 +178,12 @@
         </mxCell>
         <mxCell id="5pZEyal_g9z3olfpXIbo-9" value="Übersicht Smart-Gym" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-40" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xcgjlx6PuHo7aJOJNjeR-5" value="Adresse" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xcgjlx6PuHo7aJOJNjeR-7" value="Geräte" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="390" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
