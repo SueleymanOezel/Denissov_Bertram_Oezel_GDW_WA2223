@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-16T10:17:36.660Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="UlPdM1o_kN3urZp9zt1a" version="20.5.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-16T10:18:24.077Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42" etag="lQ70uwigz8ctRiYZDW20" version="20.5.3" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1422" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="990" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -121,8 +121,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="x7MRvZMjAkjf7LFy6HuC" name="Seite-2">
-    <mxGraphModel dx="2324" dy="2047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="x7MRvZMjAkjf7LFy6HuC" name="Domänenmodell">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -165,7 +165,7 @@
         <mxCell id="BAmUuoflb0gjVRMdjetq-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5pZEyal_g9z3olfpXIbo-1" target="BAmUuoflb0gjVRMdjetq-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BAmUuoflb0gjVRMdjetq-5" value="sehen analog" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BAmUuoflb0gjVRMdjetq-4">
+        <mxCell id="BAmUuoflb0gjVRMdjetq-5" value="sehen analog" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="BAmUuoflb0gjVRMdjetq-4">
           <mxGeometry x="-0.2475" relative="1" as="geometry">
             <mxPoint x="-7" as="offset" />
           </mxGeometry>
@@ -173,7 +173,7 @@
         <mxCell id="BAmUuoflb0gjVRMdjetq-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="5pZEyal_g9z3olfpXIbo-1" target="Xcgjlx6PuHo7aJOJNjeR-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BAmUuoflb0gjVRMdjetq-9" value="tragen sich analog ein" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BAmUuoflb0gjVRMdjetq-8">
+        <mxCell id="BAmUuoflb0gjVRMdjetq-9" value="tragen sich analog ein" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="BAmUuoflb0gjVRMdjetq-8">
           <mxGeometry x="-0.4422" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -301,6 +301,14 @@
         <mxCell id="BAmUuoflb0gjVRMdjetq-25" value="Beine" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="BAmUuoflb0gjVRMdjetq-18">
           <mxGeometry y="210" width="140" height="30" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="7YdJhaZCs_yXZqFFUHyd" name="Anwendungslogik">
+    <mxGraphModel dx="990" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
