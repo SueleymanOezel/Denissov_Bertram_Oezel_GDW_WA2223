@@ -4,8 +4,12 @@ const app = express()
 const PORT = 3000
 
 
-
 const users = []
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to my server', availableRoutes: ['/users', '/ingredients', '/nutrition'] });
+});
+
 
 // create a user
 app.post('/users', (req, res) => {
@@ -138,6 +142,25 @@ app.delete('/nutrition/:id', (req, res) => {
   res.json({ message: 'Nutrition deleted successfully' })
   })
 
+  const recipes = []
+
+  // create a recipe
+  app.post('/recipes', (req, res) => {
+  const recipe = req.body
+  recipes.push(recipe)
+  res.json({ message: 'Recipe created successfully', recipe })
+  })
+  
+  // get a recipe by ingredients
+  app.get('/recipes', (req, res) => {
+  const recipe = recipes.find((r) => r.ingredients === req.query.ingredients)
+  if (!recipe) {
+  return res.status(404).json({ message: 'Recipe not found' })
+  }
+  res.json(recipe)
+  })
+
+
   app.get('/recipes', (req, res) => {
     const ingredients = ingredients.map(ingredient => ingredient.name)  // extract ingredient names
     axios({
@@ -174,5 +197,40 @@ app.delete('/nutrition/:id', (req, res) => {
   
 
   app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`)
+     console.log(`Server running on http://localhost:${PORT}`)
   })
+
+
+  //Usecase
+  app.get('/recipes', (req, res) => {
+    const ingredients = ['onion', 'garlic', 'chicken'] //example ingredients
+    axios({
+      method: 'get',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
+      headers: {
+        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
+        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+      },
+      params: {
+        ingredients: ingredients.join(',') // join array into a string
+      }
+    }).then((response) => {
+      res.json(response.data)
+    }).catch((error) => {
+      res.status(500).json({error: error.message})
+    })
+  })
+  
+
+ app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to my server',
+    availableRoutes: ['/users', '/ingredients', '/nutrition']
+  });
+});
+
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+  });
+
+
