@@ -139,12 +139,12 @@ app.delete('/nutrition/:id', (req, res) => {
   })
 
   app.get('/recipes', (req, res) => {
-    const ingredients = req.query.ingredients.split(',') // convert ingredients string to array
+    const ingredients = ingredients.map(ingredient => ingredient.name)  // extract ingredient names
     axios({
       method: 'get',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
       headers: {
-        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
+        "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
         "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
       },
       params: {
