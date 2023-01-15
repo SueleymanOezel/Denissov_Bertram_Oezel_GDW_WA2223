@@ -3,27 +3,6 @@ const axios = require('axios')
 const app = express()
 const PORT = 3000
 
-app.get('/recipes', (req, res) => {
-  axios({
-    method: 'get',
-    url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
-    headers: {
-      "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
-      "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-    },
-    params: {
-      ingredients: req.query.ingredients
-    }
-  }).then((response) => {
-    res.json(response.data)
-  }).catch((error) => {
-    res.status(500).json({error: error.message})
-  })
-})
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`)
-})
 
 
 const users = []
@@ -157,4 +136,43 @@ app.delete('/nutrition/:id', (req, res) => {
   }
   nutrition.splice(nutritionIndex, 1)
   res.json({ message: 'Nutrition deleted successfully' })
+  })
+
+  app.get('/recipes', (req, res) => {
+    const ingredients = req.query.ingredients.split(',') // convert ingredients string to array
+    axios({
+      method: 'get',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
+      headers: {
+        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
+        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+      },
+      params: {
+        ingredients: ingredients.join(',') // join array into a string
+      }
+    }).then((response) => {
+      res.json(response.data)
+    }).catch((error) => {
+      res.status(500).json({error: error.message})
+    })
+  })
+  
+  app.get('/recipes/:id/nutritionWidget.json', (req, res) => {
+      axios({
+      method: 'get',
+      url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${req.params.id}/nutritionWidget.json`,
+      headers: {
+        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
+        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+      },
+    }).then((response) => {
+      res.json(response.data)
+    }).catch((error) => {
+      res.status(500).json({error: error.message})
+    })
+  })
+  
+
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`)
   })
