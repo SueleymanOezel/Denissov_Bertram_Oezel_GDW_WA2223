@@ -217,15 +217,11 @@ app.delete('/nutrition/:id', (req, res) => {
   })
   
 
- app.get('/', (req, res) => {
-  res.json({
-    message: 'Welcome to my server',
-    availableRoutes: ['/users', '/ingredients', '/nutrition']
-  });
-});
-
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
   });
+
+
+
 
 
