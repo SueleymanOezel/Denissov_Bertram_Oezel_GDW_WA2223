@@ -34,3 +34,6 @@ app.get('/recipe', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
   })
+
+  //eingabe in url
+  //http://localhost:3000/recipe?diet=vegetarian&excludeIngredients=onions&intolerances=lactose.

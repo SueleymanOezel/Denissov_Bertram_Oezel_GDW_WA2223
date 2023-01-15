@@ -27,3 +27,6 @@ app.get('/recipes', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
   })
+
+  //eingabe in url
+  //http://localhost:3000//recipes?ingredients=onion,garlic,chicken
