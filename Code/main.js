@@ -1,7 +1,7 @@
 const express = require('express')
 const axios = require('axios')
 const app = express()
-const PORT = 3000
+const PORT = 3001
 
 
 const users = []
@@ -193,11 +193,6 @@ app.delete('/nutrition/:id', (req, res) => {
     }).catch((error) => {
       res.status(500).json({error: error.message})
     })
-  })
-  
-
-  app.listen(PORT, () => {
-     console.log(`Server running on http://localhost:${PORT}`)
   })
 
 
