@@ -114,3 +114,47 @@ app.put('/ingredients/:id', (req, res) => {
   ingredients.splice(ingredientIndex, 1)
   res.json({ message: 'Ingredient deleted successfully' })
   })
+
+  const nutrition = []
+
+// create an nutrition
+app.post('/nutrition', (req, res) => {
+  const nutr = req.body
+  nutrition.push(nutr)
+  res.json({ message: 'Nutrition created successfully', nutr })
+})
+
+// get all nutrition
+app.get('/nutrition', (req, res) => {
+  res.json(nutrition)
+})
+
+// get an nutrition by id
+app.get('/nutrition/:id', (req, res) => {
+  const nutr = nutrition.find((i) => i.id === req.params.id)
+  if (!nutr) {
+    return res.status(404).json({ message: 'Nutrition not found' })
+  }
+  res.json(nutr)
+})
+
+// update an nutrition by id
+app.put('/nutrition/:id', (req, res) => {
+  const nutritionIndex = nutrition.findIndex((i) => i.id === req.params.id)
+  if (nutritionIndex === -1) {
+    return res.status(404).json({ message: 'Nutrition not found' })
+  }
+  const updatedNutrition = { ...nutrition[nutritionIndex], ...req.body }
+  nutrition[nutritionIndex] = updatedNutrition
+  res.json({ message: 'Nutrition updated successfully', updatedNutrition })
+})
+
+// delete an nutrition by id
+app.delete('/nutrition/:id', (req, res) => {
+  const nutritionIndex = nutrition.findIndex((i) => i.id === req.params.id)
+  if (nutritionIndex === -1) {
+    return res.status(404).json({ message: 'Nutrition not found' })
+  }
+  nutrition.splice(nutritionIndex, 1)
+  res.json({ message: 'Nutrition deleted successfully' })
+  })
