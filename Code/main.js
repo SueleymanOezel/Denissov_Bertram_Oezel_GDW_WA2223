@@ -161,13 +161,13 @@ app.delete('/nutrition/:id', (req, res) => {
   })
 
 
-  app.get('/recipes', (req, res) => {
-    const ingredients = ingredients.map(ingredient => ingredient.name)  // extract ingredient names
+  app.get('/recipeIngredients', (req, res) => {
+    const ingredients = req.query.ingredients.split(',') // get ingredients from query parameter
     axios({
       method: 'get',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
       headers: {
-        "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
+        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7", // replace with your API key
         "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
       },
       params: {
@@ -180,42 +180,39 @@ app.delete('/nutrition/:id', (req, res) => {
     })
   })
   
-  app.get('/recipes/:id/nutritionWidget.json', (req, res) => {
-      axios({
-      method: 'get',
-      url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${req.params.id}/nutritionWidget.json`,
-      headers: {
-        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
-        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-      },
-    }).then((response) => {
-      res.json(response.data)
-    }).catch((error) => {
-      res.status(500).json({error: error.message})
-    })
-  })
+  app.get('/recipeNutrition', (req, res) => {
+    const { diet, excludeIngredients, intolerances } = req.query;
 
-
-  //Usecase
-  app.get('/recipes', (req, res) => {
-    const ingredients = ['onion', 'garlic', 'chicken'] //example ingredients
     axios({
-      method: 'get',
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
-      headers: {
-        "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
-        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-      },
-      params: {
-        ingredients: ingredients.join(',') // join array into a string
-      }
+        method: 'get',
+        url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch',
+        headers: {
+            "X-RapidAPI-Key": "f1cd362545mshd489e8321a6b603p1b186ajsn697e81eb15c7",
+            "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+        },
+        params: {
+            diet: diet,
+            excludeIngredients: excludeIngredients,
+            intolerances: intolerances,
+            limitLicense: true,
+            number: 1,
+            offset: 0,
+            ranking: 1
+        }
     }).then((response) => {
-      res.json(response.data)
+        res.json(response.data)
     }).catch((error) => {
-      res.status(500).json({error: error.message})
+        res.status(500).json({error: error.message})
     })
-  })
+});
+
   
+  app.get('/', (req, res) => {
+    res.json({
+      message: 'Welcome to my server',
+      availableRoutes: ['/users', '/ingredients', '/nutrition', '/recipeIngredients', '/recipeNutrition']
+    });
+  });
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
